@@ -1,10 +1,10 @@
 module Main (main) where
 
-import Lexer (Token (..), tokenise)
+import Parser (produceAST)
 
 main :: IO ()
 main = do
   contents <- readFile "test.txt"
   let stringLines = lines contents
-  let tokens = tokenise `concatMap` stringLines
-  print tokens
+  let ast = produceAST stringLines
+  print ast

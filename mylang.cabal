@@ -25,8 +25,11 @@ source-repository head
 
 library
   exposed-modules:
+      Ast
       Lexer
       Lib
+      Parser
+      Symbols
   other-modules:
       Paths_mylang
   hs-source-dirs:
